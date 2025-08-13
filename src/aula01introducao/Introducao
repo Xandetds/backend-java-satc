@@ -1,0 +1,29 @@
+Ciclo De Um Sistema
+
+Entrada Dados -> Processamento de Dados -> Saída de Dados
+
+Etapas para o aprendizado de Programação em Java
+
+Etapa 1: Lógica de Programação
+Etapa 2: Estrutura de Dados
+Etapa 3: Orientação a Objetos
+Etapa 4: API - Spring Boot
+
+ETAPA 1: Lógica De Programação
+
+1 - Introdução - Fluxo de funcionamento de um Sistema
+2 - Convenção Java
+3 - Variáveis em Java
+4 - Entrada e Saída de Dados em Java
+5 - Operadores:
+    5.1 - Aritiméticos;
+    5.2 - Lógicos;
+    5.3 - Relacionais.
+6 - Estrutura de decisões:
+    6.1 - If-Else;
+    6.2 - Switch-case.
+7 - Estrutura de Repetição:
+    7.1 - For;
+    7.2 - While;
+    7.3 - Do-While.
+8 - Métodos (Funções)
