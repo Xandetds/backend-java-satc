@@ -8,6 +8,7 @@ public class AlexandreAtv3 {
         int idade;
         char sexo;
         char estadoCivil;
+        double salario;
 
         do {
             System.out.print("Digite um nome: ");
@@ -21,10 +22,10 @@ public class AlexandreAtv3 {
             System.out.print("Digite uma idade: ");
             while (!scanner.hasNextInt()) {
                 System.out.println("Idade inválida. Digite um número inteiro.");
-                scanner.next();
+                scanner.next(); // descarta entrada inválida
             }
             idade = scanner.nextInt();
-            scanner.nextLine();
+            scanner.nextLine(); // limpa buffer
             if (!validarIdade(idade)) {
                 System.out.println("Idade inválida. Digite um valor entre 0 e 150.");
             }
@@ -48,9 +49,23 @@ public class AlexandreAtv3 {
             }
         } while (!validarEstadoCivil(estadoCivil));
 
+        do {
+            System.out.print("Digite um salário: ");
+            while (!scanner.hasNextDouble()) {
+                System.out.println("Salário inválido. Digite um número.");
+                scanner.next();
+            }
+            salario = scanner.nextDouble();
+            scanner.nextLine();
+            if (!validarSalario(salario)) {
+                System.out.println("Salário inválido. Digite um valor maior que 0.");
+            }
+        } while (!validarSalario(salario));
+
         System.out.println("\nDados inseridos corretamente!");
-        System.out.printf("Nome: %s%nIdade: %d%nSexo: %c%nEstado Civil: %c%n",
-                nome, idade, sexo, estadoCivil);
+        System.out.printf("Nome: %s%nIdade: %d%nSexo: %c%nEstado Civil: %c%nSalário: %.2f%n",
+                nome, idade, sexo, estadoCivil, salario);
+
     }
 
     public static boolean validarNome(String nome) {
@@ -67,5 +82,9 @@ public class AlexandreAtv3 {
 
     public static boolean validarEstadoCivil(char estadoCivil) {
         return estadoCivil == 's' || estadoCivil == 'c' || estadoCivil == 'v' || estadoCivil == 'd';
+    }
+
+    public static boolean validarSalario(double salario) {
+        return salario > 0;
     }
 }
